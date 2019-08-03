@@ -14,6 +14,19 @@ import { Router } from '@angular/router';
 export class HomePage {
   constructor( private aut: AngularFireAuth, private router: Router) {
  //   this.profileInfo();
+    this.aut.authState
+        .subscribe(
+            user => {
+              if (user) {
+                this.router.navigateByUrl('home');
+              } else {
+                this.router.navigateByUrl('/login');
+              }
+            },
+            () => {
+              this.router.navigateByUrl('/login');
+            }
+        );
   }
 
   async signOut() {
