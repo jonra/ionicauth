@@ -1,0 +1,21 @@
+<ion-header>
+    
+  <ion-toolbar>
+    <ion-title>Profile Page</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <div *ngFor="let profile of profileDetails" >
+        <h2>{{profile.username}}</h2>
+        <p>{{profile.address}}</p>
+      </div>
+
+
+</ion-content>
