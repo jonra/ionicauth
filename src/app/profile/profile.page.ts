@@ -2,13 +2,9 @@ import { Component } from '@angular/core';
 
 
 import { AngularFireDatabase, AngularFireList} from '@angular/fire/database';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-import * as firebase from 'Firebase';
 
 
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument, DocumentReference } from '@angular/fire/firestore';
+import { AngularFirestore} from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-profile',
